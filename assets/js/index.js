@@ -31,16 +31,17 @@ $(function(){
                         // 2.渲染头像
                         renderAvatar(res.data)
                 },
-                complete:function(res){
-                    console.log(res);
-                    if(res.responseJSON.status ===1 && res.responseJSON.message === '身份认证失败！')
-                    {
-                        // 1.强制清空 token
-                        localStorage.removeItem("token");
-                        // 2.强制跳转到login页面
-                        location.href= "/login.html"
-                    }
-                }
+                // 给你放到baseAPI里了
+                // complete:function(res){
+                //     // console.log(res);
+                //     if(res.responseJSON.status ===1 && res.responseJSON.message === '身份认证失败！')
+                //     {
+                //         // 1.强制清空 token
+                //         localStorage.removeItem("token");
+                //         // 2.强制跳转到login页面
+                //         location.href= "/login.html"
+                //     }
+                // }
             
                
             })
